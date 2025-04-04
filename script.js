@@ -132,3 +132,31 @@ h4.forEach(function(elem) {
         purple.style.opacity = "0"
     })
 })
+
+// magnetic effect
+
+let circles = document.querySelectorAll(".circle");
+
+circles.forEach((elem) => {
+    elem.addEventListener("mousemove", (e) => {
+        let rect = elem.getBoundingClientRect();
+        let x = e.clientX - (rect.left + rect.width / 2);
+        let y = e.clientY - (rect.top + rect.height / 2);
+
+        gsap.to(elem, {
+            x: x * 1, // Increase for stronger effect
+            y: y * 0.6,
+            duration: 0.4,
+            ease: "power2.out"
+        });
+    });
+
+    elem.addEventListener("mouseleave", () => {
+        gsap.to(elem, {
+            x: 0,
+            y: 0,
+            duration: 0.4,
+            ease: "power2.out"
+        });
+    });
+});

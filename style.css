@@ -30,7 +30,7 @@ html,body{
     background: #edbfff;
     z-index: 98;
     mix-blend-mode: difference;
-    transition: background-image ease 0.2s;
+    transition: background-image ease 0.5s;
     background-position: center;
     background-size: cover;
     pointer-events: none;
@@ -178,7 +178,8 @@ nav h4:nth-child(1){
     width: 100%;
     position: relative;
     z-index: 99;
-    padding-top: 60px;
+    padding: 60px 0;
+    border-bottom: 1.5px solid #0f0d0d;
 }
 
 .page3 h1{
@@ -212,7 +213,7 @@ nav h4:nth-child(1){
 }
 
 .part3-footer h1 {
-    font-size: 34px;
+    font-size: 5vw;
     color: #000000;
 }
 
@@ -224,13 +225,13 @@ nav h4:nth-child(1){
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     background-color: #edbfff;
     color: black;
     text-align: center;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.1s ease;
 }
 
 .circle:hover {
@@ -247,6 +248,7 @@ nav h4:nth-child(1){
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-bottom: 1.5px solid #ffffff;
 }
 
 .elem{
@@ -279,7 +281,7 @@ nav h4:nth-child(1){
 } */
 
 .elem h1{
-    font-size: 7.5vw;
+    font-size: 7.6vw;
     transition: all ease-in-out 0.3s;
     font-weight: 100;
 }
@@ -344,17 +346,16 @@ footer{
 }
 
 .footer-top p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     background-color: #ffffff;
     color: black;
-    text-align: center;
-    transition: background-color 0.3s;
-    font-size: 100%;
+}
+
+.footer-top p:hover{
+    background: #0f0d0d;
+    color: #fff;
 }
 
 .footer-top h1, p{
